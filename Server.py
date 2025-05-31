@@ -29,10 +29,16 @@ class ProtectHTTP(BaseHTTPRequestHandler):
 server = HTTPServer((HOST, PORT), ProtectHTTP)
 print("Server is running...")
 
+command = input("type 'close server' to close the server")
+while (command != 'close server'):
 
-server.serve_forever()
+    server.serve_forever()
+
+
+
 server.server_close()
 
+#write in a command or method to close the server
 print("Server is stopped")
 
 
